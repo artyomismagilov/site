@@ -1,36 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/libs/gsap/gsap.min.js" defer></script>
     <script src="/libs/gsap/ScrollSmoother.min.js" defer></script>
     <script src="/libs/gsap/ScrollTrigger.min.js" defer></script>
+    <link rel="stylesheet" href="libs/node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="libs/node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Космос</title>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="content">
             <header class="main-header">
                 <div class="layers">
-					<div class="layer__header">
-						<div class="layers__caption">Что такое вселенная?</div>
-						<div class="layers__title">Откуда началось наше путешествие?</div>
-					</div>
-					<div class="layer layers__base" style="background-image: url(img/звезды1.png);"></div>
-					<div class="layer layers__middle" style="background-image: url(img/звезды2.png);"></div>
-					<div class="layer layers__front" style="background-image: url(img/звезды3.png);"></div>
+                    <div class="layer__header">
+                        <div class="layers__caption">Что такое вселенная?</div>
+                        <div class="layers__title">Откуда началось наше путешествие?</div>
+                    </div>
+                    <div class="layer layers__base" style="background-image: url(img/звезды1.png);"></div>
+                    <div class="layer layers__middle" style="background-image: url(img/звезды2.png);"></div>
+                    <div class="layer layers__front" style="background-image: url(img/звезды3.png);"></div>
                     <img src="/img/arrow.png" alt="arrow">
-				</div>
+                </div>
 
             </header>
             <article class="content__container">
                 <div class="text__block"></div>
                 <img src="/img/planet.png" alt="planet" class="planet">
             </article>
+            <article class="content__container">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Меркурий</h3>
+                                    <img src="img/slider_el_1.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Венера</h3>
+                                    <img src="img/slider_el_2.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            <li class="glide__slide">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Солнце</h3>
+                                    <img src="img/slider_el_3.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                    </div>
+
+                    <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
+                        <button class="glide__bullet" data-glide-dir="=0"></button>
+                        <button class="glide__bullet" data-glide-dir="=1"></button>
+                        <button class="glide__bullet" data-glide-dir="=2"></button>
+                    </div> -->
+
+                </div>
+            </article>
         </div>
     </div>
-    <script src="/js/main.js"></script>
+    <script type="module" src="/js/main.js"></script>
+    <script src="libs/node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel'
+        }).mount()
+    </script>
 </body>
+
 </html>

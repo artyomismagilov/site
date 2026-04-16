@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@glidejs/glide": "^3.7.1",
+    "gsap": "^3.15.0"
+  }
+}
