@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "Canis Minor";
+  src: url('/fonts/canis_minor.ttf') format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +24,48 @@ body {
     position: relative;
     background: #0B0C10;
     background-image: url(/img/звезды1.png);
+}
+
+
+
+.header{
+    align-items: center;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.navigation{
+    
+    font-family: "Canis Minor";
+    color: white;
+    font-weight: 100;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer{
+    font-family: "Canis Minor";
+    color: white;
+    font-weight: 100;
+    display: flex;
+    justify-content: space-around;
+}
+
+.title-footer{
+font-size: 20px;
+}
+
+.footer ul {
+    margin: 1rem;
+     list-style-type: none;
 }
 
 body::after {
@@ -102,11 +150,13 @@ body::before {
 }
 
 .layers__title {
+    
     font-size: clamp(1.5rem, 1.148rem + 1.502vw, 2.5rem);
     letter-spacing: clamp(0.25rem, 0.162rem + 0.376vw, 0.5rem);
 }
 
 .layers__caption {
+   
     font-size: clamp(0.6rem, 0.459rem + 0.601vw, 1rem);
     letter-spacing: clamp(0.2rem, 0.112rem + 0.376vw, 0.45rem);
     margin-top: clamp(-0.8rem, -0.73rem + -0.3vw, -1rem);
@@ -118,18 +168,99 @@ body::before {
     justify-content: space-around;
 }
 
+.content__container_new {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* .content__container_new .content__container {
+    height: 90vh;
+} */
+
+.left{
+    border-radius:  0px 15px 15px 0px;
+    padding: 0.7rem;
+    width: 50%;
+    height: 60%;
+    background: linear-gradient(to bottom, #1f2a3ae8 0%, #1f2a3a20 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.121);
+}
+
+.right{
+    border-radius:  15px 0px 0px 15px;
+     padding: 0.7rem;
+    width: 50%;
+    height: 60%;
+    background: linear-gradient(to bottom, #1f2a3ae8 0%, #1f2a3a20 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.121);
+}
+
+
+.block{
+    gap: 2rem;
+    padding: 2rem clamp(3.125rem, 1.923rem + 19.231vi, 25rem) ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.block .text__block {
+    width: 100%;
+    height: 100%;
+    border-radius:  0px 15px;
+}
+
+
+
 .planet {
     width: 30%;
     /* animation: bounce 2s infinite; */
 }
 
+.univers {
+    margin-right: -4rem;
+    width: clamp(12.5rem, 2.632rem + 39.474vi, 50rem);
+}
+
 .text__block {
+    padding: 0.7rem;
     width: 50%;
     height: 60%;
     background: linear-gradient(to bottom, #1f2a3ae8 0%, #1f2a3a20 100%);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.121);
+}
+
+.text{
+    margin-top: 1rem;
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.text-center{
+    margin-top: 2rem;
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    padding:0px 25rem;
+}
+
+.title {
+    font-family: 'Canis Minor' ;
+    font-weight:500;
+    font-size: 50px;
+    color: white;
+}
+
+.title_block{
+    font-family: 'Canis Minor' ;
+    font-weight:500;
+    font-size:  90px;
+    color: white;
 }
 
 .slider__el {
@@ -161,3 +292,13 @@ body::before {
         transform: translateX(-50%) translateY(-20%);
     }
 }
+
+/* @media(min-width: 350px  ) and (max-width: 900px){
+    .block .text__block {
+    width: 70%;
+}
+    .block{
+    justify-content: center;
+    padding: 2rem 1rem ;
+}
+} */
