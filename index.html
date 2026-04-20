@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/libs/gsap/gsap.min.js" defer></script>
-    <script src="/libs/gsap/ScrollSmoother.min.js" defer></script>
-    <script src="/libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
     <link rel="stylesheet" href="libs/node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="libs/node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -14,59 +14,60 @@
 </head>
 
 <body>
+    <header class="main-header">
+            <img src="img/logo-mini.png" alt="logo" class="mini-ligo" style="width: 40px; height: 40px" >
+            <div class="navigation">
+                <a class="title-footer" href="#start">Старт</a>
+                <a class="title-footer" href="#we_home">Наш дом</a>
+                <a class="title-footer" href="#new_home">Новый дом</a>
+            </div>
+    </header>
     <div class="wrapper">
-        <div class="content">
-           
-            <header class="main-header">
-                <div class="header"> 
-                    <img src="img/logo-mini.png" alt="logo" class="mini-ligo">
-                    <div class="navigation">
-                        <a class="title-footer" href="#start">Старт</a>
-                        <a class="title-footer" href="#we_home">Наш дом</a>
-                        <a class="title-footer" href="#new_home">Новый дом</a>
-                    </div>
-                    
-                </div>
-                <div class="layers" id="start">
+            <div class="content">
+        
+
+        
+                <div class="layers">
                     <div class="layer__header">
                         <div class="layers__caption">Что такое вселенная?</div>
                         <div class="layers__title">Откуда началось наше путешествие?</div>
                     </div>
+
                     <div class="layer layers__base" style="background-image: url(img/звезды1.png);"></div>
                     <div class="layer layers__middle" style="background-image: url(img/звезды2.png);"></div>
                     <div class="layer layers__front" style="background-image: url(img/звезды3.png);"></div>
                     <img src="img/arrow.png" alt="arrow">
                 </div>
+                
 
-            </header>
-            <article class="content__container">
+            
+
+            <article class="content__container" id="start">
                 <div class="text__block">
                     <h1 class="title">Вселенная</h1>
-                    <p class="text">Бесконечное пространство, окружающее нашу планету и простирающееся в самые отдалённые уголки
-                        пространства. </p>
-                    <p class="text">Это царство звёзд, галактик, туманностей и чёрных дыр и космоса. Сама Вселенная постоянно
-                        расширяется, но нужно понимать, что вселенная становится больше за счёт увеличения расстояние между галактиками.
-                        Диаметр наблюдаемой Вселенной оценивается в 93 миллиарда световых лет, где один световой год это 9,46 триллионам
-                        километров. </p>
+                    <p class="text">Бесконечное пространство, окружающее нашу планету и простирающееся в самые отдалённые уголки пространства. </p>
+                    <p class="text">Это царство звёзд, галактик, туманностей и чёрных дыр и космоса. Сама Вселенная постоянно расширяется, но нужно понимать, что вселенная становится больше за счёт увеличения расстояние между галактиками. Диаметр наблюдаемой Вселенной оценивается в 93 миллиарда световых лет, где один световой год это 9,46 триллионам километров. </p>
                 </div>
-                <img src="img/universe.png" alt="planet" class="univers">
+                <div class="universe"></div>
             </article>
+
             <article class="content__container_new">
                 <h1 class="title_block">
                     Что входит во вселенную
                 </h1>
+
                 <div class="block">
                     <div class="text__block">
-                        <h1 class="title">Глактика</h1>
+                        <h1 class="title">Галактика</h1>
                         <p class="text">это система из звёзд и их скоплений,
                             космической пыли, межзвёздного газа,
                             планет и тёмной материи, все объекты которой связаны силами гравитации и двигаются
-                            по орбитам относительно центра масс.  </p>
+                            по орбитам относительно центра масс.</p>
                         
                     </div>
                     <div class="text__block">
                         <h1 class="title">Звезда</h1>
-                        <p class="text">это массивное самосветящееся небесное тело, состоящее из газа и плазмы, в котором происходят термоядерные реакции. Простыми словами это огромный шар из горячего газа, который сам производит свет и тепло.</p>
+                        <p class="text">это массивное самосветящееся небесное тело, состоящее из газа и плазмы, в котором происходят термоядерные реакции. Простыми словами это огромный шар из горячего газа, который сам производит свет и тепло.</p>
                         
                     </div>
                     <div class="text__block">
@@ -80,65 +81,211 @@
                     </div>
                     <div class="text__block">
                         <h1 class="title">Тёмная материя</h1>
-                        <p class="text">это гипотетическая форма материи, которая не участвует в электромагнитном взаимодействии и поэтому недоступна прямому наблюдению. Простыми словами, это невидимое вещество, которое заполняет пространство Вселенной.</p>
+                        <p class="text">это гипотетическая форма материи, которая не участвует в электромагнитном взаимодействии и поэтому недоступна прямому наблюдению. Простыми словами, это невидимое вещество, которое заполняет пространство Вселенной.</p>
                     </div>
                 </div>
             </article>
+
             <article class="content__container_new" id="we_home">
                 <h1 class="title_block">
                     Наш дом
                 </h1>
-                <div class="glide">
+                 <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close close1" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_1.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Желтый карлик (звезда) <br>
+            Расстояние : центр солнечной системы <br>
+            День: ~25 земных суток (на экваторе) <br>
+            Год: ~225–250 млн земных лет  <br>
+            Температура: ~5500°C (на поверхности) / ~15 млн°C (в ядре)<br>
+Описание: Центральное светило Солнечной системы, содержащее 99,86% всей ее массы. Представляет собой гигантский шар из плазмы. </div>
+         </div>
+    </div>
+
+    <div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close close2" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_2.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Каменистая планет <br>
+            Расстояние от Солнца: ~58 млн км<br>
+            День: 59 земных суток<br>
+            Год: 88 земных суток<br>
+            Температура: от −180°C до +430°C<br>
+            Описание:Самая близкая к Солнцу планета. Практически не имеет атмосферы, поэтому температура сильно колеблется.-</div>
+         </div>
+    </div>
+
+    <div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close close3" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_3.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Каменистая планета <br>
+            Расстояние от Солнца: ~108 млн км<br>
+            День: 243 земных суток<br>
+            Год: 225 земных суток<br>
+            Температура: ~465°C<br>
+            Описание:Самая горячая планета из-за плотной атмосферы из углекислого газа. Вращается в обратную сторону. </div>
+         </div>
+    </div>
+
+    <div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close close4" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_4.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Каменистая планета <br>
+            Расстояние от Солнца: ~150 млн км<br>
+            День: 24 часа<br>
+            Год: 365 дней<br>
+            Температура: в среднем +15°C<br>
+            Описание: Единственная известная планета с жизнью. Имеет воду в жидком состоянии и кислородную атмосферу. </div>
+         </div>
+    </div>
+
+    <div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close close5" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_5.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Каменистая планета <br>
+            Расстояние от Солнца: ~228 млн км<br>
+            День: 24.6 часа<br>
+            Год: 687 дней<br>
+            Температура: ~−60°C<br>
+            Описание:Известен как «красная планета». Есть следы воды в прошлом, активно изучается. </div>
+         </div>
+    </div>
+
+    <div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close close6" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_6.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Газовый гигант <br>Расстояние от Солнца: ~778 млн км<br>
+            День: ~10 часов<br>
+            Год: 12 лет<br>
+            Температура: ~−110°C<br>
+            Описание:Самая большая планета. Имеет Большое красное пятно — гигантский шторм. </div>
+         </div>
+    </div>
+
+
+    <div id="modal7" class="modal">
+    <div class="modal-content">
+        <span class="close close7" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_7.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Газовый гигант <br>
+            Расстояние от Солнца: ~1.4 млрд км<br>
+            День: ~10.7 часов<br>
+            Год: 29 лет<br>
+            Температура: ~−140°C<br>
+            Описание:Известен своими кольцами, состоящими из льда и камней. </div>
+         </div>
+    </div>
+
+    <div id="modal8" class="modal">
+    <div class="modal-content">
+        <span class="close close8" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_8.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Ледяной гигант <br>
+            Расстояние от Солнца: ~2.9 млрд <br>
+            День: ~17 часов<br>
+            Год: 84 года<br>
+            Температура: ~−195°C<br>
+            Описание:Вращается «на боку». Имеет холодную атмосферу и слабовыраженные кольца.</div>
+         </div>
+    </div>
+
+     <div id="modal9" class="modal">
+    <div class="modal-content">
+        <span class="close close9" >&times;</span>
+        <img id="modalImage" class="modal-image" src="img/slider_el_9.png" alt="Увеличенное изображение">
+        <div id="modalText" class="modal-text">Тип: Ледяной гигант <br>
+            Расстояние от Солнца: ~4.5 млрд км<br>
+            День: ~16 часов<br>
+            Год: 165 лет<br>
+            Температура: ~−200°C<br>
+            Описание:Самая дальняя планета. Известна сильнейшими ветрами в Солнечной системе.</div>
+         </div>
+    </div>
+                <div class="glide" id="glide">
                     <div class="glide__track" data-glide-el="track">
                         <ul class="glide__slides">
-                            <li class="glide__slide">
+                            <li class="glide__slide" id="openWord1">
                                 <div class="slider__el">
-                                    <h3 class="slider__header">Меркурий</h3>
+                                    <h3 class="slider__header">Солнце</h3>
                                     <img src="img/slider_el_1.png" alt="planet" class="slider__img">
                                 </div>
                             </li>
-                            <li class="glide__slide">
+                            <li class="glide__slide" id="openWord2">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Меркурий</h3>
+                                    <img src="img/slider_el_2.png" alt="planet" class="slider__img">
+                                    
+
+                                </div>
+  
+                            </li>
+                            <li class="glide__slide" id="openWord3">
                                 <div class="slider__el">
                                     <h3 class="slider__header">Венера</h3>
-                                    <img src="img/slider_el_2.png" alt="planet" class="slider__img">
-                                </div>
-                            </li>
-                            <li class="glide__slide">
-                                <div class="slider__el">
-                                    <h3 class="slider__header">Солнце</h3>
                                     <img src="img/slider_el_3.png" alt="planet" class="slider__img">
                                 </div>
                             </li>
+                            <li class="glide__slide" id="openWord4">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Земля</h3>
+                                    <img src="img/slider_el_4.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            <li class="glide__slide" id="openWord5">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Марс</h3>
+                                    <img src="img/slider_el_5.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            <li class="glide__slide" id="openWord6">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Юпитер</h3>
+                                    <img src="img/slider_el_6.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            <li class="glide__slide" id="openWord7">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Сатурн</h3>
+                                    <img src="img/slider_el_7.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            <li class="glide__slide" id="openWord8">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Уран</h3>
+                                    <img src="img/slider_el_8.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            <li class="glide__slide" id="openWord9">
+                                <div class="slider__el">
+                                    <h3 class="slider__header">Нептун</h3>
+                                    <img src="img/slider_el_9.png" alt="planet" class="slider__img">
+                                </div>
+                            </li>
+                            
                         </ul>
                     </div>
 
                     <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">←</button>
+                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">→</button>
                     </div>
-
-                    <!-- <div class="glide__bullets" data-glide-el="controls[nav]">
-                        <button class="glide__bullet" data-glide-dir="=0"></button>
-                        <button class="glide__bullet" data-glide-dir="=1"></button>
-                        <button class="glide__bullet" data-glide-dir="=2"></button>
-                    </div> -->
 
                 </div>
             </article>
+
             <article class="content__container_new" id="new_home">
-                 <h1 class="title_block">
-                    Новый дом
-                </h1>
-                <h2 class="title">
-                    За пределами Солнечной системы: где может жить человек?
-                </h2>
-                <p class="text-center">Вопрос о том, одиноки ли мы во Вселенной, волнует человечество на протяжении веков. Сегодня у нас есть
-                    не просто философские рассуждения, а конкретные научные данные. Астрономы обнаружили уже более 6 тысяч экзопланет —
-                    миров, вращающихся вокруг других звезд . И среди них есть настоящие кандидаты, которые теоретически могли бы стать
-                    новым домом для человечества.
-                    По данным на март 2026 года, астрономы отобрали 45 планет за пределами Солнечной системы, которые имеют наибольшие
-                    шансы оказаться пригодными для жизни.</p>
-                <article class="content__container ">
+                 <h1 class="title_block">Новый дом</h1>
+                <h2 class="title new_home">За пределами Солнечной системы: где может жить человек?</h2>
+                <p class="text-center">Вопрос о том, одиноки ли мы во Вселенной, волнует человечество на протяжении веков. Сегодня у нас есть не просто философские рассуждения, а конкретные научные данные. Астрономы обнаружили уже более 6 тысяч экзопланет — миров, вращающихся вокруг других звезд. И среди них есть настоящие кандидаты, которые теоретически могли бы стать новым домом для человечества. По данным на март 2026 года, астрономы отобрали 45 планет за пределами Солнечной системы, которые имеют наибольшие шансы оказаться пригодными для жизни.</p>
+            </article>
+
+            <section class="planet_container">
+                <div class="planet__item">
                     <div class="right">
                         <h1 class="title">Проксима Центавра b</h1>
                         <p class="text">Ближайший к нам кандидат в «вторую Землю» — всего 4,2 световых года.
@@ -157,8 +304,9 @@
                 
                     </div>
                     <img src="img/центавра-b.png" alt="planet" class="planet">
-                </article>
-                <article class="content__container">
+                </div>
+
+                <div class="planet__item">
                     <img src="img/trappist-1.png" alt="planet" class="planet">
                     <div class="left">
                         <h1 class="title">TRAPPIST-1 f</h1>
@@ -178,9 +326,9 @@
                         </p>
                 
                     </div>
-                    
-                </article>
-                <article class="content__container">
+                </div>
+
+                <div class="planet__item">
                     <div class="right">
                         <h1 class="title">Kepler-186 f</h1>
                         <p class="text"> Историческая планета — первая землеподобная, найденная в обитаемой зоне другой звезды.
@@ -200,8 +348,9 @@
                         </p>
                     </div>
                     <img src="img/kepler-186.png" alt="planet" class="planet">
-                </article>
-                <article class="content__container">
+                </div>
+
+                <div class="planet__item">
                     <img src="img/lhs-1140.png" alt="planet" class="planet">
                     <div class="left">
                         <h1 class="title">LHS 1140 b</h1>
@@ -221,9 +370,11 @@
                             в пользу потенциальной обитаемости.
                         </p>
                     </div>
-                </article>    
-            </article> 
-            <div class="footer">
+                </div>
+                
+            </section>
+
+            <footer class="footer">
                 <div class="comand">
                     <h3 class="title-footer">Команда: БРИК-А-БРАК</h3>
                     <ul>
@@ -234,11 +385,9 @@
                     </ul>
                 </div>
                 <img src="img/logo.png" alt="logo">
-            </div>  
-        </div>
+            </footer>  
         
-    </div>
-    <script type="module" src="/js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
     <script src="libs/node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script>
         new Glide('.glide', {
