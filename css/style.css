@@ -204,10 +204,12 @@ p {
 
 .left {
     border-radius: 15px 0px 0px 15px;
+    background: linear-gradient(to right, #1f2a3ae8 0%, #1f2a3a20 100%);
 }
 
 .right {
     border-radius: 0px 15px 15px 0px;
+    background: linear-gradient(to left, #1f2a3ae8 0%, #1f2a3a20 100%);
 }
 
 .grid {
@@ -484,13 +486,14 @@ p {
 }
 @media (min-width: 300px) and (max-width: 800px) {
     .main-header{
+         /* position: auto; */
         grid-template-columns: 1fr ;
         height: 90px;
     }
      .mini-ligo{
         display: none;
      }
-     body, html, *{
+     body, html{
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
         overflow-x: auto;
@@ -542,11 +545,6 @@ p {
    
     
     
-}
-
-.main-header {
-  
-    position: auto;
 }
 
 }
