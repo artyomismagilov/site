@@ -456,6 +456,7 @@ p {
     font-weight: 100;
     display: flex;
     justify-content: space-around;
+    background-image: url(../img/звезды1.png);
 }
 
 .title-footer {
@@ -480,4 +481,66 @@ p {
     100% {
         box-shadow: none;
     }
+}
+@media (min-width: 400px) and (max-width: 800px) {
+    .main-header{
+        height: 90px;
+    }
+     .mini-ligo{
+        display: none;
+     }
+     body, html{
+        overflow-x: none;
+     }
+
+     .universe{
+        z-index: -1;
+        top: 70%;
+        width: 24rem;
+     }
+
+     .content__container {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    padding: clamp(20px, 4vw, 82px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background-image: url(../img/universe_bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.grid{
+    grid-template-columns: 1fr;
+    padding: 1rem;
+}
+
+.text__block {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 320px;
+    max-width: 800px;
+    background: linear-gradient(to bottom, #1f2a3ae8 0%, #1f2a3a20 100%);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.121);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.001);
+}
+
+.grid .text__block {
+   
+    padding: 1.25rem;
+    max-width: 90%;
+    height: 100%;
+   
+    
+    
+}
+
+
 }
