@@ -19,7 +19,6 @@
 html,
 body {
     width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -34,7 +33,6 @@ body {
 p {
     font-weight: 100;
 }
-
 
 /* ШАПКА */
 
@@ -204,10 +202,12 @@ p {
 
 .left {
     border-radius: 15px 0px 0px 15px;
+    background: linear-gradient(to right, #1f2a3ae8 0%, #1f2a3a20 100%);
 }
 
 .right {
     border-radius: 0px 15px 15px 0px;
+    background: linear-gradient(to left, #1f2a3ae8 0%, #1f2a3a20 100%);
 }
 
 .grid {
@@ -224,12 +224,15 @@ p {
     max-width: 70%;
     height: 100%;
     border-radius: 0px 15px;
-    /* background: rgba(11, 26, 46, 0.69); */
     justify-self: end;
 }
 
 .text__block:nth-child(2n) {
     justify-self: start;
+}
+
+h1{
+    padding-top: 60px;
 }
 
 .title {
@@ -454,8 +457,14 @@ p {
     margin-top: 5rem;
     font-family: "Canis Minor";
     font-weight: 100;
+    align-items: center;
     display: flex;
     justify-content: space-around;
+    background-image: url(../img/звезды1.png);
+}
+
+h1{
+    padding-top: 90px;
 }
 
 .title-footer {
@@ -473,6 +482,11 @@ p {
     font-size: 1.1rem;
 }
 
+.logo{
+    height: 120px;
+    width: 120px;
+}
+
 @keyframes blockLoaded {
     50% {
         box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.162);
@@ -480,4 +494,106 @@ p {
     100% {
         box-shadow: none;
     }
+}
+@media (min-width: 300px) and (max-width: 800px) {
+    .main-header {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        height: 90px;
+    }
+
+    .mini-ligo {
+        display: none;
+    }
+
+    body,
+    html {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        overflow: visible !important;
+    }
+
+    .universe {
+        z-index: -1;
+        top: 70%;
+        width: 24rem;
+    }
+
+    .content__container {
+        min-height: 80vh;
+    }
+
+    .content__container_new {
+
+        height: max-content;
+        margin-bottom: 0px;
+    }
+
+    .content__container_new:nth-child(2n+2) {
+        margin-top: 7rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .text__block {
+        max-width: 800px;
+    }
+
+    .grid .text__block {
+        padding: 1.25rem;
+        max-width: 90%;
+        height: 100%;
+    }
+
+    .glide__arrows {
+        display: none;
+    }
+
+    .slider__img {
+        width: 350px;
+    }
+
+    .height {
+        height: 60vh !important;
+    }
+
+    .modal {
+        height: auto;
+    }
+
+    .modal-text {
+        font-size: 16px;
+    }
+
+    .planet__item {
+        position: relative
+    }
+
+    .planet_container {
+        padding-top: 50px;
+        overflow-x: hidden;
+        gap: 7rem;
+    }
+
+    .planet {
+        left: 20px;
+        top: -40px;
+        width: 150%;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .planet:nth-child(2n+1) {
+        left: -220px;
+    }
+
+    .logo {
+        height: 80px;
+        width: 80px;
+    }
+
 }
