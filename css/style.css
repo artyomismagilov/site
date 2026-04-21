@@ -231,7 +231,7 @@ p {
     justify-self: start;
 }
 
-h1{
+#we_home, #new_home{
     padding-top: 60px;
 }
 
@@ -463,10 +463,6 @@ h1{
     background-image: url(../img/звезды1.png);
 }
 
-h1{
-    padding-top: 90px;
-}
-
 .title-footer {
     font-family: "Canis Minor", sans-serif;
     color: white;
@@ -502,6 +498,19 @@ h1{
         height: 90px;
     }
 
+    .navigation {
+        gap: 4rem;
+    }
+
+    #we_home,
+    #new_home {
+        padding-top: 90px;
+    }
+
+    .footer {
+        padding: 1rem;
+    }
+
     .mini-ligo {
         display: none;
     }
@@ -520,18 +529,14 @@ h1{
         width: 24rem;
     }
 
-    .content__container {
-        min-height: 80vh;
-    }
-
     .content__container_new {
-
         height: max-content;
         margin-bottom: 0px;
     }
 
     .content__container_new:nth-child(2n+2) {
-        margin-top: 7rem;
+        margin-top: 3rem;
+
     }
 
     .grid {
@@ -547,6 +552,11 @@ h1{
         padding: 1.25rem;
         max-width: 90%;
         height: 100%;
+    }
+
+    .mt {
+        margin-top: 24rem !important;
+        margin-bottom: 14rem;
     }
 
     .glide__arrows {
