@@ -482,14 +482,17 @@ p {
         box-shadow: none;
     }
 }
-@media (min-width: 400px) and (max-width: 800px) {
+@media (min-width: 300px) and (max-width: 800px) {
     .main-header{
+        grid-template-columns: 1fr ;
         height: 90px;
     }
      .mini-ligo{
         display: none;
      }
-     body, html{
+     body, html, *{
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
         overflow-x: auto;
      }
 
