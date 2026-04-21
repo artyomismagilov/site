@@ -19,7 +19,8 @@
 html,
 body {
     width: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    
 }
 
 body {
@@ -486,7 +487,6 @@ p {
 }
 @media (min-width: 300px) and (max-width: 800px) {
     .main-header{
-         position: auto;
         grid-template-columns: 1fr ;
         height: 90px;
     }
@@ -497,6 +497,8 @@ p {
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
         overflow-x: auto;
+        overflow: visible !important;
+        /* height: auto !important; */
      }
 
      .universe{
