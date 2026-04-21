@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
 @font-face {
-  font-family: "Canis Minor";
-  src: url('../fonts/canis_minor.ttf') format("truetype");
+    font-family: "Canis Minor";
+    src: url('../fonts/canis_minor.ttf') format("truetype");
 }
 
 * {
@@ -18,7 +18,8 @@
 }
 
 
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -32,17 +33,14 @@ body {
     background: #0B0C10;
 }
 
-a {
-    font-family: "Onest", sans-serif;
-    color: white;
-    text-decoration: none;
-    font-weight: 300;
+p {
+    font-weight: 100;
 }
 
 /* ШАПКА */
 
 .main-header {
-     font-family: "Canis Minor", sans-serif;
+    font-family: "Canis Minor", sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -57,7 +55,7 @@ a {
     align-items: center;
 }
 
-.navigation{
+.navigation {
     display: flex;
     gap: 5rem;
     justify-content: center;
@@ -143,6 +141,8 @@ a {
 /* ВСЕЛЕННАЯ */
 
 .content__container {
+    position: relative;
+    width: 100%;
     min-height: 100vh;
     padding: clamp(20px, 4vw, 82px);
     display: flex;
@@ -155,16 +155,23 @@ a {
     background-size: cover;
 }
 
-/* .content__container::before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-image: url(../img/звезды2.png);
-    opacity: 50%;
-    z-index: 0;
-    pointer-events: none;
-} */
+.content__container_new {
+    height: 100vh;
+    text-align: center;
+    margin-bottom: 5rem;
+    background-image: url(../img/galaxy_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.height {
+    height: 100vh !important;
+}
+
+.mt {
+    margin-top: 12rem !important;
+}
 
 .text__block {
     padding: 1.25rem;
@@ -180,81 +187,61 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.001);
 }
 
-.title {
-    font-family: 'Canis Minor';
-    font-weight: 400;
-    font-size: clamp(28px, 4vw, 60px);
-    color: white;
-}
-
-.text {
-    font-size: clamp(14px, 1.2vw, 22px);
-    font-weight: 100;
-}
-
-.universe {
-    background-image: url(../img/universe.png);
-    width: clamp(220px, 30vw, 500px);
-    aspect-ratio: 1/1;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-}
-
-/* ЧТО ВХОДИТ ВО ВСЕЛЕННУЮ */
-
-.content__container_new {
-    height: 100vh;
-    text-align: center;
-    margin-bottom: 5rem;
-    background-image: url(../img/galaxy_bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* .content__container_new::before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-image: url(../img/звезды2.png);
-    opacity: 50%;
-    z-index: 0;
-    pointer-events: none;
-} */
-
-.title_block {
-    font-family: 'Canis Minor';
-    font-weight: 400;
-    font-size: clamp(32px, 5vw, 80px);
-}
-
-.block {
+.grid {
+    margin-top: 5%;
     gap: 2rem;
-    padding: 2rem clamp(3.125rem, 1.923rem + 19.231vi, 25rem) ;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.block .text__block {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.grid .text__block {
     text-align: left;
     padding: 1.25rem;
-    width: 100%;
+    max-width: 70%;
     height: 100%;
     border-radius: 0px 15px;
     background: rgba(11, 26, 46, 0.69);
+    justify-self: end;
 }
 
-.block .title {
-    font-family: 'Exo 2';
-    font-weight: 700;
-    font-size: 24px;
+.text__block:nth-child(2n) {
+    justify-self: start;
+}
+
+.title {
+    font-family: 'Canis Minor';
+    font-weight: 400;
+    font-size: clamp(32px, 5vw, 80px);
+    color: white;
+}
+
+.h2 {
+    font-size: clamp(28px, 4vw, 60px) !important;
+}
+
+.h3 {
+    font-size: clamp(1.25rem, 0.714rem + 1.429vw, 2rem) !important;
+    font-weight: 700 !important;
+}
+
+.text {
+    text-align: justify;
+    font-size: clamp(14px, 1.2vw, 22px);
+}
+
+.universe {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    background-image: url(../img/universe.png);
+    width: clamp(12.5rem, 2.632rem + 39.474vi, 50rem);
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* НАЩ ДОМ */
@@ -271,25 +258,17 @@ a {
     gap: 2rem;
 }
 
-/* .slider__el::before {
-    position: absolute;
+.slider__img {
     width: 500px;
-    height: 400px;
-} */
-
-.slider__header {
-    font-family: "Exo 2";
-    font-size: 2.5rem;
-    color: #e7e7e0;
-    font-weight: 800;
 }
 
-.slider__img:hover{
-   cursor: pointer;
+.slider__img:hover {
+    cursor: pointer;
 }
 
-.glide__arrow--left, .glide__arrow--right {
-    
+.glide__arrow--left,
+.glide__arrow--right {
+
     border: none;
     background: #0B1A2E;
     width: 100px;
@@ -300,86 +279,87 @@ a {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    
+
 }
 
 .planet {
     width: 30%;
-    /* animation: bounce 2s infinite; */
 }
 
 
 
 .modal {
-            display: none;
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
 
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        /* Белое окно с контентом */
-        .modal-content {
-            background: linear-gradient(90deg, rgba(11, 26, 46, 1) 100%, rgba(11, 26, 46, 0.49) 100%);
-            border-radius: 15px;
-            margin: 40px;
-            padding: 30px;
-            max-width: 600px;
-            width: 100%;
-            height: 70%;
-            position: relative;
-            text-align: center;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        /* Крестик закрытия (справа сверху) */
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 35px;
-            font-weight: bold;
-            color: #ffffff;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        
-        .close:hover {
-            color: red;
-            transform: scale(1.1);
-        }
-        
-        /* Картинка внутри модального окна */
-        .modal-image {
-            width: 100%;
-            max-height: 250px;
-            object-fit: contain;
-        }
-        
-        /* Текст под картинкой */
-        .modal-text {
-            font-size: 18px;
-            color: #ffffff;
-            margin-top: 10px;
-            line-height: 1.5;
-            text-align: left;
-        }
-        
-        /* Анимация появления */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Белое окно с контентом */
+.modal-content {
+    background: linear-gradient(to bottom, #1f2a3ae8 0%, #1f2a3a20 100%);
+    border: 1px solid rgba(255, 255, 255, 0.121);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.001);
+    border-radius: 15px;
+    margin: 40px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Крестик закрытия (справа сверху) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+/* Картинка внутри модального окна */
+.modal-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+}
+
+/* Текст под картинкой */
+.modal-text {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 10px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 
 
@@ -402,19 +382,10 @@ a {
     align-items: center;
 }
 
-.title.new_home {
-    font-family: "Exo 2";
-    font-size: 2rem;
-}
-
 .text-center {
     margin-top: 2rem;
-    color: white;
     font-size: clamp(16px, 1.2vw, 20px);
-    font-weight: 100;
-    padding: 0 clamp(20px, 10vw, 200px);
-    max-width: 1200px;
-    text-align: center;
+    max-width: 75%;
 }
 
 .planet_container {
@@ -433,7 +404,8 @@ a {
     flex-wrap: wrap;
 }
 
-.right, .left {
+.right,
+.left {
     flex: 1 1 300px;
     padding: 2rem;
     display: flex;
@@ -443,20 +415,22 @@ a {
 }
 
 .right {
-    border-radius:  15px 0px 0px 15px;
-    background: linear-gradient(90deg,rgba(11, 26, 46, 1) 60%, rgba(11, 26, 46, 0.49) 100%);
+    border-radius: 15px 0px 0px 15px;
+    background: linear-gradient(90deg, rgba(11, 26, 46, 1) 60%, rgba(11, 26, 46, 0.49) 100%);
 }
 
 .left {
-    border-radius:  0px 15px 15px 0px;
-    background: linear-gradient(270deg,rgba(11, 26, 46, 1) 60%, rgba(11, 26, 46, 0.49) 100%);
+    border-radius: 0px 15px 15px 0px;
+    background: linear-gradient(270deg, rgba(11, 26, 46, 1) 60%, rgba(11, 26, 46, 0.49) 100%);
 }
 
 @keyframes bounce {
+
     0%,
     100% {
         transform: translateX(-50%) translateY(0);
     }
+
     50% {
         transform: translateX(-50%) translateY(-20%);
     }
@@ -471,7 +445,11 @@ a {
     justify-content: space-around;
 }
 
-.title-footer{
+.title-footer {
+    font-family: "Canis Minor", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
     font-size: 20px;
 }
 
