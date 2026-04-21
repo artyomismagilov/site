@@ -523,7 +523,6 @@ p {
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    flex: 1 1 320px;
     max-width: 800px;
     background: linear-gradient(to bottom, #1f2a3ae8 0%, #1f2a3a20 100%);
     border-radius: 20px;
