@@ -486,7 +486,7 @@ p {
 }
 @media (min-width: 300px) and (max-width: 800px) {
     .main-header{
-         /* position: auto; */
+         position: auto;
         grid-template-columns: 1fr ;
         height: 90px;
     }
