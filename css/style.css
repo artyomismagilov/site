@@ -235,6 +235,10 @@ p {
     justify-self: start;
 }
 
+h1{
+    padding-top: 60px;
+}
+
 .title {
     font-family: 'Canis Minor';
     font-weight: 400;
@@ -461,6 +465,10 @@ p {
     display: flex;
     justify-content: space-around;
     background-image: url(../img/звезды1.png);
+}
+
+h1{
+    padding-top: 90px;
 }
 
 .title-footer {
